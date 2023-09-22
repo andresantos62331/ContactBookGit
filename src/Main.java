@@ -150,8 +150,8 @@ public class Main {
         else System.out.println(BOOK_EMPTY);
     }
     private static void getName(Scanner in, ContactBook cBook) {
-        String number;
-        number = in.nextLine();
+        int number;
+        number = in.nextInt();
         if (cBook.hasNumber(number)) {
             String name = cBook.getName(number);
             System.out.println(name);
