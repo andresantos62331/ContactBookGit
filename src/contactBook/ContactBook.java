@@ -113,4 +113,15 @@ public class ContactBook {
     public String getName(int number) {
         return contacts[searchIndexByNumber(number)].getName();
     }
+
+    public boolean hasRepeatedNumbers() {
+        for(int i = 0; i < counter - 1; i++) {
+            for(int j = 1; j < counter; j++) {
+                if(contacts[i].getPhone() == contacts[j].getPhone()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
