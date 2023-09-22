@@ -28,6 +28,9 @@ public class Main {
     public static final String NUMB_NOT_EXIST = "Phone number does not exist.";
     public static final String QUIT_MSG = "Goodbye!";
     public static final String COMMAND_ERROR = "Unknown command.";
+    public static final String EXISTS_REPEATED_NUMBER = "There are contacts that share phone numbers.";
+
+    public static final String DIFFERENT_NUMBERS = "All contacts have different phone numbers.";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -170,9 +173,9 @@ public class Main {
     private static void verifyPhoneNumber(ContactBook cBook) {
 
         if (cBook.hasRepeatedNumbers()) {
-            System.out.println("There are contacts that share phone numbers.");
+            System.out.println(EXISTS_REPEATED_NUMBER);
         }
-        else System.out.print("All contacts have different phone numbers.");
+        else System.out.print(DIFFERENT_NUMBERS);
     }
 
 
