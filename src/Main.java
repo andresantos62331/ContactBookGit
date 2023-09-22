@@ -176,9 +176,9 @@ public class Main {
         if (cBook.hasRepeatedNumbers()) {
             System.out.println(EXISTS_REPEATED_NUMBER);
         }
-        else System.out.print(DIFFERENT_NUMBERS); System.out.println();
-    }
-
-
-
+        else {
+            System.out.print(DIFFERENT_NUMBERS);
+            System.out.println();
+            }
+        }
 }
