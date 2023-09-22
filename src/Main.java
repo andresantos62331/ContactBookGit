@@ -65,6 +65,7 @@ public class Main {
                     break;
                 case VERIFY_CONTACT:
                     verifyPhoneNumber(cBook);
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
