@@ -161,12 +161,12 @@ public class Main {
     }
     private static void getName(Scanner in, ContactBook cBook) {
         int number;
-        number = in.nextInt();
+        number = in.nextInt(); in.nextLine();
         if (cBook.hasNumber(number)) {
             String name = cBook.getName(number);
             System.out.println(name);
         }
-        else System.out.println(NAME_NOT_EXIST);
+        else System.out.println(NUMB_NOT_EXIST);
 
     }
 
