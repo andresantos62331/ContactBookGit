@@ -16,6 +16,8 @@ public class Main {
     public static final String GET_NAME       = "GN";
     public static final String QUIT           = "Q";
 
+    public static final String VERIFY_CONTACT = "EP";
+
     //Constantes que definem as mensagens para o utilizador
     public static final String CONTACT_EXISTS = "contactBook.Contact already exists.";
     public static final String NAME_NOT_EXIST = "contactBook.Contact does not exist.";
@@ -55,6 +57,11 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case GET_NAME:
+                    getName(in, cBook);
+                    break;
+                case VERIFY_CONTACT:
+                    verifyPhoneNumber(cBook);
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -159,4 +166,15 @@ public class Main {
         else System.out.println(NAME_NOT_EXIST);
 
     }
+
+    private static void verifyPhoneNumber(ContactBook cBook) {
+
+        if (cBook.hasRepeatedNumbers()) {
+            System.out.println("There are contacts that share phone numbers.");
+        }
+        else System.out.print("All contacts have different phone numbers.");
+    }
+
+
+
 }
